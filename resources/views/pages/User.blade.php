@@ -70,16 +70,17 @@
 
 
             
-            <div class="tabe" >
-                <div class="card" >
-                    <h3>Ramadan</h3>
+            <div class="tabe"  >
+                <div class="card" onclick="newComp();" >
+                    <h2>لتسجيل على المسابقة :</h2>
+                    <h3>رمضان</h3>
                     <p>
-                        Expiry date : 15/8/2023
+                        تاريخ انتهاء التسجيل : 15/8/2023
                     </p>
                     <p>
-                        Contest date : 31/8/2023
+                        تاريخ المسابقة : 31/8/2023
                     </p>
-                    <span>New</span>
+                    <span>جديد</span>
                 </div>
             </div>
 
@@ -123,12 +124,208 @@
 
             </div>
             
+            <div class="overlay" >
+
+            </div>
+
+            <div class="ContestRegistration contenar">
+
+                <div class=" userDetailsTitle ContestRegistrationDetails " >
+                    <h3 style="font-weight: bold; color: #005937;"> رمضان</h3>
+                    <div class="closeCard" onclick="closeCard();">
+                    <ion-icon name="close-outline"  ></ion-icon>
+                    </div>
+                </div> 
+                <div class="userDetails  " >
+                    
+                    <form action="" class="flexDetailsInput">
+
+                        <!-- 1 -->
+
+                        <div class="flexDetails  activeQ">
+                            <label for="">هل سبرتي بالاوقاف؟</label>
+                            <div class="radio" >
+                                <div class="radioDetails" >
+                                    <span>نعم</span>
+                                    <input data-goto="2" type="radio" name="quest_1" value="y" class="q1-yes">
+                                </div>
+                                <div class="radioDetails">
+                                    <span>لا</span>
+                                    <input data-goto="3" type="radio" name="quest_1" value="n" class="q1-no" >
+                                </div>
+                            </div>   
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="flexDetails  inactiveQ" id="sounded-q2 " data-goto="3">
+                            <label for="">ما هي الاجزاء التي سبرتيها ؟</label>
+                            <div class="sounded" id="soundedQ">
+                                <div class="" >
+                                    <p>الاجزاء</p>
+                                    <select class="" >
+                                        <option vlaue="1"> الخمسة الاخيرة</option>
+                                        <option vlaue="2"> الخمسة الاولى</option>
+                                        <option vlaue="3"> العشرة الاولى</option>
+                                        <option vlaue="4"> العشرة الثانية</option>
+                                        <option vlaue="5"> العشرة الثالثة</option>
+                                        <option vlaue="6"> الخمسة عشر الاولى</option>
+                                        <option vlaue="7"> الخمسة عشر الثانية</option>
+                                        <option vlaue="8"> عشرون الاولى</option>
+                                        <option vlaue="9"> عشرون الثانية</option>
+                                        <option vlaue="10">القرآن كامل</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>  هل نجحتي بهم</p>
+                                    <div class="soundedYN" >
+                                        <div class="radioDetails" >
+                                            <span>نعم</span>
+                                            <input  type="radio" name="quest_1" value="y" >
+                                        </div>
+                                        <div class="radioDetails">
+                                            <span>لا</span>
+                                            <input  type="radio" name="quest_1" value="n"  >
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                                <div class="addNewSounded" onclick="addSounded();" >
+                                    <span  >+</span>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+
+                    <!-- 3 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هو الفرع الذي سوف تشاركين به بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="4">ثلاثة اجزاء</option>
+                                    <option value="2" data-goto="5"> خمسة اجزاء</option>
+                                    <option value="3" data-goto="6"> العشر الاجزاء</option>
+                                    <option value="4" data-goto="8">خمسة عشرة جزء  </option>
+                                    <option value="5" data-goto="7">العشرون جزء </option>
+                                    <option value="6" data-goto="9">القرآن كامل</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        
+                        <!-- 4 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p> ادخل الاجزاء </p>
+                            <input type="text" data-goto="10">
+                            </div>
+                            
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> خمسة اولى</option>
+                                    <option value="2" data-goto="10">  خمسة ثانية</option>
+                                    <option value="3" data-goto="10">  خمسة ثالثة</option>
+                                    <option value="4" data-goto="10">    خمسة رابعة</option>
+                                    <option value="5" data-goto="10">  خمسة خامسة</option>
+                                    <option value="6" data-goto="10"> خمسة آخيرة</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <!-- 6 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> عشرة اولى</op>
+                                    <option value="2" data-goto="10">  عشرة ثانية</option>
+                                    <option value="3" data-goto="10">  عشرة ثالثة</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <!-- 7 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> عشرون الاولى</option>
+                                    <option value="2" data-goto="10">  عشرون الثانية</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <!-- 8 -->
+                        <div class="flexDetails  inactiveQ">
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> خمسة عشر الاولى</option>
+                                    <option value="2" data-goto="10">  خمسة عشر الثانية</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <!-- 9 -->
+                        <div class="flexDetails  inactiveQ" >
+                            <label for="">ما هي الاجزاء الذي سوف تشاركين بها بالمسابقة ؟</label>
+                            <div class="" >
+                                <p>الاجزاء</p>
+                                <select class="" >
+                                    <option value="1" data-goto="10"> مفردات الخمسة الاولى </option>
+                                    <option value="2" data-goto="10">  مفردات الخمسة الثانية</option>
+                                    <option value="3" data-goto="10">  مفردات الخمسة الثالثة</option>
+                                    <option value="4" data-goto="10">   مفردات الخمسة الرابعة</option>
+                                    <option value="5" data-goto="10"> مفردات الخمسة الخامسة</option>
+                                    <option value="6" data-goto="10">  مفردات الخمسة الآخيرة</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- 10 -->
+                        <div class="flexDetails  inactiveQ" >
+                            <div>
+                                <p>في اي فترة ستشاركين</p>
+                                <div class="radio" >
+                                    <div class="radioDetails" >
+                                        <span>الصباحية</span>
+                                        <input data-goto="11" type="radio" name="quest_" value="y" class="">
+                                    </div>
+                                    <div class="radioDetails">
+                                        <span>المسائية</span>
+                                        <input data-goto="11" type="radio" name="quest_" value="n" class="" >
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                        <!-- 11 -->
+                        <div class="flexDetails  inactiveQ">
+                            <div>
+                                <p> تم الانتهاء من التسجيل بنجاح</p>
+                            </div>
+                        </div>
+
+                        
+                    </form>
+                    <button type="button" id="next_question" onclick="nextQ()" >حفظ</button>
+                </div>
+            </div>
         </div>
 
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="{{asset('admin/JS/JS.js')}}" ></script>
+    <script src="{{asset('admin/JS/user.js')}}" ></script>
 
 </body>
 </html>

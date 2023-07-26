@@ -40,10 +40,10 @@ Route::resource('competitions' , CompetitionController::class);
 Route::get( 'profile' , [userDashboardController::class , 'profile'] )->middleware('auth')->name('profile');
 
 
-Route::prefix('search')->middleware(['auth' , 'isAdmin'])->group(function(){
-    Route::get('users',[SearchController::class, 'searchUsers']);
-    Route::get('trashedUsers' , [SearchController::class, 'searchTrashedUsers']);
-    Route::get('competitions' , [SearchController::class, 'searchCompetitions']);
-    Route::get('thoseUsers/{id}' , [SearchController::class, 'searchThoseUsers']);
-    Route::get('thoseCompetitions/{id}' , [SearchController::class, 'searchThoseCompetitions']);
-});
+// Route::prefix('search')->middleware(['auth' , 'isAdmin'])->group(function(){
+//     Route::get('users',[SearchController::class, 'searchUsers']);
+//     Route::get('trashedUsers' , [SearchController::class, 'searchTrashedUsers']);
+//     Route::get('competitions' , [SearchController::class, 'searchCompetitions']);
+//     Route::get('thoseUsers/{id}' , [SearchController::class, 'searchThoseUsers']);
+//     Route::get('thoseCompetitions/{id}' , [SearchController::class, 'searchThoseCompetitions']);
+// });

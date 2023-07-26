@@ -18,7 +18,7 @@ class AdminMiddleware
     {
         if(!Auth::user()->role_as == '1'){
 
-            return redirect('/')->with('message' , 'Access Denied');
+            return redirect('profile')->with('message' , 'Access Denied');
         }
         return $next($request);
     }
