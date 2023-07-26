@@ -1,0 +1,1004 @@
+
+    @import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Montserrat:wght@100;200;300;500&family=Ubuntu:wght@300&display=swap');
+
+    *{
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+
+    :root{
+
+        --blue:#005937;
+        --white:#fff;
+        --grey:#f5f5f5;
+        --black1:#222;
+        --black2:#999;
+
+    }
+
+    body{
+
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: 'Amiri', serif !important;
+        font-size: 14px;
+        width: 100vw;
+    }
+
+    .container{
+
+        position: relative;
+        width: 98%;
+
+    }
+
+    .navigation{
+
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        background-color: var(--blue);
+        border-right: 10px solid var(--blue);
+        transform: 0.5s;
+        overflow: hidden;
+    }
+
+    .navigation.active
+    {  
+        width: 80px;
+            
+    }
+
+    .navigation ul
+    {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navigation ul li
+    {
+
+        position: relative;
+        width: 100%;
+        list-style: none;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .navigation ul li:hover,
+    .navigation ul li.hovered
+    {
+
+    background-color: var(--white);
+    
+    }
+
+
+
+    .navigation ul li:nth-child(1)
+    {
+
+    margin-bottom: 40px;
+    pointer-events: none;
+
+    }
+
+
+
+
+    .navigation ul li a
+    {
+
+        position: relative;
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        text-decoration: none;
+        color: var(--white);
+        font-family: 'Amiri', serif;
+    }
+
+    .navigation ul li:hover a ,
+    .navigation ul li.hovered a
+    {
+
+        color: var(--blue);
+    }
+
+    .loge
+    {
+        margin-top: 5px;
+        
+        
+    }
+    .logo
+    {
+        line-height: 53px !important;
+        font-family: 'Gulzar', serif !important;
+        font-size: 24px;
+        color: #FFF5B8;
+    }
+
+    .icon img
+    {
+        border-radius:50%;
+    
+
+    }
+
+
+    .navigation ul li a .icon
+    {
+
+        position: relative;
+        display: block;
+        min-width: 60px;
+        height: 60px;
+        line-height: 75px;
+        text-align: center;
+    }
+
+    .navigation ul li a .icon ion-icon
+    {
+
+            font-size: 1.75em;
+
+    }
+
+    .navigation ul li a .title
+    {
+
+        position: relative;
+        display: block;
+        padding: 0 10px;
+        height: 60px;
+        line-height: 60px;
+        text-align: start;
+        white-space: nowsrap;
+    }
+
+    /* ******* */
+
+    .navigation ul li:hover a::before ,
+    .navigation ul li.hovered a::before 
+    {
+        content: "";
+        position: absolute;
+        right: 83%;
+        top: -48px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -34px 38px 0 10px var(--white);
+        pointer-events: none;
+    }
+
+    .navigation ul li:hover a::after,
+    .navigation ul li.hovered a::after
+    {
+        content: "";
+        position: absolute;
+        right: 83%;
+        bottom: -50px;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-radius: 50%;
+        box-shadow: -30px -35px 0 10px var(--white);
+        pointer-events: none;
+    }
+
+
+
+    /* main */
+
+
+    .main
+    {
+
+        position: absolute;
+        width: calc(100% - 300px);
+        left: 0;
+        min-height: 100vh;
+        background-color: var(--white);
+        transform: 0.5s;
+        font-family: 'Amiri', serif !important;
+        font-size: 14px;
+    }
+
+    .main.active
+    {
+        width: calc(100% - 80px);
+        right: 80px;
+    }
+
+
+    .topbar
+    {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    
+        
+    }
+
+    .toggle
+    {
+
+        position: relative;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        cursor: pointer;
+    }
+
+    .search
+    {
+        position: relative;
+        width: 400px;
+        margin: 0 10px;
+    }
+
+    .search label
+    {
+        position: relative;
+        width: 100%;
+        
+    }
+
+    .search label input
+    {
+        width: 100%;
+        height: 40px;
+        border-radius: 40px;
+        padding: 5px 20px;
+        padding-left: 35px;
+        font-size: 18px;
+        outline: none;
+        border: 1px solid var(--black2);   
+    }
+
+    .search label ion-icon
+    {
+        position: absolute;
+        top: 0px;
+        left: 10px;
+        font-size: 1.2em; 
+    }
+
+
+    .user
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 1px solid var(--blue) ;
+        border-radius: 50%;
+        cursor: pointer; 
+    }
+
+    .userIcon
+    {
+        position: absolute;
+        left: 9px;
+        top: 8px;
+        font-size: 21px;
+        color: var(--blue);
+    }
+
+    .user img
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    /* tap */
+
+    .tabe
+    {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        
+    }
+    .tabe a
+    {
+        color: var(--white);
+        text-decoration: none;
+        background-color: var(--blue);
+        padding: 10px;
+        /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+        border-radius: 5px;
+    
+    }
+
+    .tabe .userTabe:hover
+    {
+        background-color: var(--grey);
+        color: var(--blue);
+    }
+
+    .tabe .archiveTabe:hover
+    {
+        background-color: var(--grey);
+        color: var(--blue);
+        cursor: pointer;
+    }
+
+    .tabe .userTabe
+    {
+        position: absolute;
+        top: 37px;
+        left: 24px;
+    }
+
+
+    .tabe  .archiveTabe
+    {
+        position: absolute;
+        top: 37px;
+        left: 90px;
+    }
+
+
+
+    /* table */
+
+    .usersTable
+    {
+        display: block;
+    }
+
+    .archiveTable
+    {
+        display: none;
+    }
+
+
+    .details
+    {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        top: 34px;
+        font-family: 'Amiri', serif !important;
+    }
+
+    .details .usersDetails
+    {
+        position: relative;
+        top: 60px;
+        display: grid;
+        min-height: 500px;
+        background-color: var(--white);
+        padding: 20px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        display: block;
+    
+    }
+
+    .tableHeader
+    {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start
+
+    }
+
+    .tableHeader h2
+    {
+
+        font-weight: 600;
+        color: var(--blue);
+
+    }
+    .btn{
+
+        position: relative;
+        padding: 5px 10px;
+        background: var(--blue);
+        text-decoration: none;
+        color: var(--white);
+        border-radius: 6px;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .details table{
+
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .details table thead td{
+
+    font-weight: 600;
+    }
+
+    .details .usersDetails table tr{
+
+        color: var(--black1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    .details .usersDetails table tr:last-child{
+        border-bottom: none;
+        pointer-events: none;
+    }
+
+    .details .usersDetails table tbody tr:hover{
+
+        color: var(--white);
+        background: var(--blue);
+
+    }
+
+    th, td
+    {
+    text-align: left;
+    padding: 10px
+    }
+
+    .details .usersDetails table td{
+
+        padding: 10px;
+    }
+    .details .usersDetails table tr td:last-child{
+
+        text-align: end;
+    }
+    .details .usersDetails table tr :last-child{
+
+        text-align: end;
+    }
+
+    .deleteUser button , .tableIcon button
+    {
+        background-color: #EB455F;
+        padding: 5px;
+        border: 0;
+        color: var(--white);
+        border-radius: 4px;
+    }
+
+    .deleteUser button:hover
+    {
+        cursor: pointer;
+    }
+
+    /* Add User */
+
+    .addUserCard {
+
+        position: absolute;
+        background-color: var(--white);
+        display: none ;
+        width: 600px;
+        min-height: 620px;
+        left: 28%;
+        top: 8%;
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    }  
+
+
+    .addMarkCard
+    {
+        position: absolute;
+        background-color: var(--white);
+        display:none;
+        width: 300px;
+        height: 200px;
+        left: 42%;
+        top: 20%;
+        border-radius: 21px;
+        z-index: 2;
+    }
+
+
+
+    .addComptionCard , .ContestRegistration{
+
+        position: absolute;
+        background-color: var(--white);
+        display: none;
+        width: 400px;
+        min-height: 300px;
+        left: 42%;
+        top: 20%;
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+
+    }
+
+    .ContestRegistration
+    {
+        min-height: 350px !important;
+        width: 450px !important;
+    }
+    .flexDetails{
+
+        display: flex;
+        flex-direction: column;
+        margin: 7px;
+    }
+
+    form .flexDetails input{
+
+        width: 250px;
+        height: 26px;
+        
+    }
+    /* .flexDetailsInput {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    } */
+
+    .flexDetailsInputComption{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .flexDetailsComption {
+
+        margin: 10px 0;
+
+    }
+    .flexDetailsIcon
+    {
+        position: absolute;
+        top: 68%;
+        left: 92%;
+        font-size: 1.5em;
+        
+    }
+    .contenar{
+
+        padding: 20px;
+        
+    }
+    .AouqphDetailsTitle,.userDetailsTitle ,.ComptionDetailsTitle{
+
+        border-bottom: 1px solid var(--black2);
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .userDetailsTitle ion-icon ,.ComptionDetailsTitle ion-icon{
+
+    font-size: 1.5em;
+    cursor: pointer;
+    }
+    .AouqphDetailsTitle {
+
+        margin-top: 20px;
+    
+    }
+    .userDetailsTitle ,.ComptionDetailsTitle{
+
+        margin-top: 5px;
+
+    }
+
+    .overlay{
+
+        /* background-color: #7e3af2; */
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.5); 
+        z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+        
+
+    }
+
+    .saveIcon ,.saveIconComption{
+
+        position: absolute;
+        font-size: 1.5em;
+    
+    }
+
+    .saveIcon {
+
+
+        left: 85%;
+        top: 90%;
+
+    
+    }
+    .saveIconComption{
+
+    
+        left: 78%;
+        top: 84%;
+    
+    }
+
+    ion-icon 
+    {
+        cursor: pointer;
+    }
+
+
+    .saveIcon button ,.saveIconComption button
+    {
+        background-color: var(--blue);
+        padding: 8px;
+        color: var(--white);
+        border: 0;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 70px;
+    }
+
+
+
+
+    .card
+    {
+        
+        max-width: 350px;
+        position: relative;
+        top: 8px;
+        display: grid;
+        min-height: 100px;
+        background-color: var(--white);
+        padding: 20px;
+        box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+        border-radius: 20px;
+        display: block;
+        
+        }
+        
+        .card h2
+        {
+            color:var(--blue) ;
+        }
+    .card:hover
+    {
+        
+        background-color:var(--blue);
+        color: var(--white) !important;
+    
+    }  
+
+    .card p
+    {
+        margin: 5px 0;
+    }
+
+
+    .card span
+    {
+        position: absolute;
+        left: 6%;
+        top: 12px;
+        color: var(--white);
+        background-color: #F45050;
+        padding: 4px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+
+    .card:hover
+    {
+        cursor: pointer;
+    }
+
+    .dropdownPart 
+    {
+        position: relative;
+        
+    }
+
+
+    .dropdownPart p
+    {
+    
+        width: 200px !important;
+        
+    }
+    .dropdownPart:hover .dropdown
+    {
+        display: block;
+        
+    }
+    .dropdownPart p::after
+    {
+        content: "";
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: 6px solid var(--black1);
+        position: absolute;
+        left: 4px;
+        top: 12px;
+    }
+        
+
+    .dropdown
+    {
+        -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+        -moz-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+        box-shadow: 0 1px 1px rgba(0,0,0,.5);
+        background-color: var(--white);
+        width: 200px;
+        position: absolute;
+        display: none;
+    }
+
+    .dropdown li 
+    {
+        list-style: none;
+
+    }
+
+    .dropdown li:hover 
+    {
+        background-color: #999;
+        cursor: pointer;
+        border-bottom: 0;
+    }
+
+    input ,.dropdownPart
+    {
+        border-radius: 8px !important;
+        border: 0.5px solid var(--black2);
+
+    }
+
+    .radio
+    {
+        display: flex;
+    }
+
+
+
+    .radioDetails
+    {
+        display: flex;
+    }
+
+    .radioDetails input
+    {
+        min-height: 20px !important;
+        width: 20px !important;
+        margin-left: 44px !important;
+    }
+
+    .radioDetails span
+    {
+        margin-left: 15px !important;
+    }
+
+    .activeQ
+    {
+        display: block;
+    }
+
+    .inactiveQ
+    {
+        display: none;
+    }
+
+    .ContestRegistration .saveIcon
+    {
+        
+        left: 19px;
+        top: 72%;
+    }
+
+    .saveIcon button:hover
+    {
+        cursor: pointer;
+    }
+
+    .addNewSounded 
+    {   
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--blue);
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        left: 2px;
+        top: 11px;
+
+    }
+
+    .addNewSounded:hover
+    {   
+        background-color: #115e40;
+    }
+    .addNewSounded span
+    {   
+        position: absolute;
+        left: 6px;
+        bottom: -4px;
+
+    }
+
+    .sounded
+    {
+        display: flex !important;
+        width: 100% !important ;
+        justify-content: space-between !important;
+        align-items: center !important ; 
+    }
+    .soundedYN
+    {
+        display: flex;
+        align-items: center;
+    }
+
+    .addUsersounded
+    {
+        display: flex !important;
+        width: 100% !important ;
+        justify-content: space-between !important;
+        align-items: center !important ;
+    }
+
+
+
+    @media only screen and (max-width: 350px) {
+
+        
+        body{
+
+            width: 350px;
+        }
+
+    
+        .navigation
+        {
+            width: 80px;
+        }
+    
+        .main.topbar
+            {
+
+                width: 30px;
+            }
+            .search
+            {
+                width: 130px;
+            }
+            .user
+            {
+            
+                width: 30px;
+                height: 30px;
+            
+            }
+
+            .userIcon
+            {
+            
+                left: 6px;
+                top: 6px;
+                font-size: 16px;
+                
+            }
+
+            .main
+            {
+                width: calc(100% - 80px);
+                right: 80px;
+            }
+            
+            .userTable thead{
+                display: none;
+            }
+        
+            .userTable, .userTable tbody, .userTable tr, .userTable td{
+                display: block;
+                width: 100%;
+            }
+            .userTable tr{
+                margin-bottom:15px;
+            }
+            .userTable td{
+                text-align: right;
+                padding-left: 50%;
+                text-align: right;
+                position: relative;
+            }
+            .userTable td::before{
+                content: attr(data-label);
+                position: absolute;
+                left:0;
+                width: 50%;
+                padding-left:15px;
+                font-size:15px;
+                font-weight: bold;
+                text-align: left;
+            }
+            .footerTable
+            {
+                font-size: 14px;
+                display: flex !important;
+                flex-direction: column;
+            }
+            .addUserCard {
+
+                width:300px;
+                height: 300px;
+                left: 34px;
+                top: 7px;
+                position: fixed;
+                overflow: scroll !important;
+            
+            }  
+            .addUsersounded
+            {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            .card
+            {
+                width: 231px;
+            }
+    }
+
+    #next_question
+    {
+        background-color: var(--blue);
+        padding: 8px;
+        color: var(--white);
+        border: 0;
+        border-radius: 5px;
+        font-size: 16px;
+        width: 70px;   
+    }
+    .flitter ion-icon
+    {
+        margin-left: -4px;
+    }
+
+
+    .restoreIcon{
+        color: #005937;
+        font-size: 25px
+    }
+    
+
+    .tableIcon:hover .restoreIcon{
+        color: #ffffff;
+    }

@@ -1,0 +1,172 @@
+
+
+  
+/* main */
+
+:root{
+
+  --blue:#005937;
+  --white:#fff;
+  --grey:#f5f5f5;
+  --black1:#222;
+  --black2:#999;
+
+}
+
+.moreDetails
+{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  
+}
+.userDetailsSection form{
+
+  display: grid;
+  grid-template-columns:  15% 36% 9% 40%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "col1 col2 col3 col4 "
+                       "col5 col6 col7 col8";
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  background-color: var(--white);
+  min-height: 100px;
+  padding: 20px;
+}
+.UserName
+{
+
+  grid-area: col1;
+
+}
+.UserNameLable
+{
+
+  grid-area: col2;
+
+}
+.AlmasijedName
+{
+
+  grid-area: col3;
+
+}
+.AlmasijedNameLable
+{
+
+  grid-area: col4;
+
+}
+.Password
+{
+
+  grid-area: col5;
+
+  margin: 6px 0;
+}
+.PasswordLable
+{
+
+  grid-area: col6;
+  margin: 6px 0;
+
+}
+.supervisor
+{
+
+  grid-area: col7;
+  margin: 6px 0;
+
+}
+.supervisorLabele
+{
+
+  grid-area: col8;
+  margin: 6px 0;
+
+}
+.comptionDetail{
+
+    position: relative;
+    min-height: 70px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+  
+
+}
+
+.saveMoreDetails
+{
+  display: none;
+}
+/* probe */
+
+
+
+.probe
+{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+
+.probeDetails{
+
+
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;                      
+  min-height: 70px;
+  background-color: var(--white);
+  padding: 20px;
+}
+.Date ,.DateLable
+{
+  margin: 6px 0;
+}
+/* competitionDetails */
+
+
+
+.competitionDetails{
+    grid-area: competitionDetails;
+    border-radius: 5px;
+    color: var(--fontcolor);
+    
+}
+
+form
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.userDetailsSection ion-icon{
+  position: absolute;
+  left: 42px;
+  top: 30px;
+  font-size: 24px !important; 
+  color: var(--blue);
+}
+
+.probeDetails ion-icon{
+  position: absolute;
+  left: 42px;
+  top: 30px;
+  font-size: 24px !important; 
+  color: var(--blue);
+}
+
+input
+{
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.saveProbe
+{
+  display: none;
+}
