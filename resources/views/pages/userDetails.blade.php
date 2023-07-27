@@ -55,11 +55,13 @@
                   </div>
                   <!-- search -->
                   <div class="search">
-                      <label for="">
-                          <input type="text" placeholder="ابحث هنا" >
-                          <ion-icon name="search-outline"></ion-icon>
-                      </label>
-                  </div>
+                    <form action="{{url('search/thoseCompetitions/'.$user->id)}}" method="get" role="search">
+                        <label for="">
+                            <input name="search" type="text" placeholder="ابحث هنا">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </label>
+                    </form>
+                </div>
                   <!-- userImag -->
                     
                   {{Auth::user()->name}}

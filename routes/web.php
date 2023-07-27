@@ -4,6 +4,7 @@ use App\Http\Controllers\CompetitionController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\userDashboardController;
 use Illuminate\Support\Facades\Route;
@@ -35,15 +36,15 @@ Route::get('users/restoreUser/{id}', [UserController::class, 'restoreUser'])->mi
 Route::get('users/restoreAllUsers', [UserController::class, 'restoreAllUsers'])->middleware(['auth' , 'isAdmin'])->name('restoreAllUsers');
 Route::resource('users' , UserController::class)->middleware(['auth' , 'isAdmin']);
 
-Route::resource('competitions' , CompetitionController::class);
+Route::resource('competitions' , CompetitionController::class)->middleware(['auth' , 'isAdmin']);
 
 Route::get( 'profile' , [userDashboardController::class , 'profile'] )->middleware('auth')->name('profile');
 
 
-Route::prefix('search')->middleware(['auth' , 'isAdmin'])->group(function(){
-    Route::get('users',[SearchController::class, 'searchUsers']);
-    Route::get('trashedUsers' , [SearchController::class, 'searchTrashedUsers']);
-    Route::get('competitions' , [SearchController::class, 'searchCompetitions']);
-    Route::get('thoseUsers/{id}' , [SearchController::class, 'searchThoseUsers']);
-    Route::get('thoseCompetitions/{id}' , [SearchController::class, 'searchThoseCompetitions']);
-});
+// Route::prefix('search')->middleware(['auth' , 'isAdmin'])->group(function(){
+//     Route::get('users',[SearchController::class, 'searchUsers']);
+//     Route::get('trashedUsers' , [SearchController::class, 'searchTrashedUsers']);
+//     Route::get('competitions' , [SearchController::class, 'searchCompetitions']);
+//     Route::get('thoseUsers/{id}' , [SearchController::class, 'searchThoseUsers']);
+//     Route::get('thoseCompetitions/{id}' , [SearchController::class, 'searchThoseCompetitions']);
+// });

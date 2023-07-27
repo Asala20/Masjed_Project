@@ -60,10 +60,12 @@
                     </div>
                     <!-- search -->
                     <div class="search">
-                        <label for="">
-                            <input type="text" placeholder="ابحث هنا" >
-                            <ion-icon name="search-outline"></ion-icon>
-                        </label>
+                        <form action="{{url('search/thoseUsers/'.$competition->id)}}" method="get" role="search">
+                            <label for="">
+                                <input name="search" type="text" placeholder="ابحث هنا">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </label>
+                        </form>
                     </div>
                     <!-- userImag -->
                     

@@ -63,10 +63,12 @@
                     </div>
                     <!-- search -->
                     <div class="search">
-                        <label for="">
-                            <input type="text" placeholder="ابحث هنا" >
-                            <ion-icon name="search-outline"></ion-icon>
-                        </label>
+                        <form action="{{url('search/users')}}" method="get" role="search">
+                            <label for="">
+                                <input name="search" type="text" placeholder="ابحث هنا">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </label>
+                        </form>
                     </div>
                     <!-- userImag -->
                     
@@ -75,9 +77,6 @@
                 </div>
 
                 <!-- table -->
-
-
-                
                 <div class="tabe" >
                     <a href="{{route('users.index')}}" class="userTabe" >الحسابات</a>
                     <a href="{{route('trashedUsers')}}" class="archiveTabe" >الأرشيف</a>
@@ -94,7 +93,7 @@
                         </div>
 
 
-                        <table class="userTable"  >
+                        <table class="userTable">
                             <thead>
                                 <tr>
                                     <th>الاسم</th>
